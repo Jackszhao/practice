@@ -1,10 +1,10 @@
-package com.example.practice;
+package com.zhao.java_base;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PracticeApplicationTests {
+class JavaBaseApplicationTests {
 
     @Test
     void contextLoads() {
