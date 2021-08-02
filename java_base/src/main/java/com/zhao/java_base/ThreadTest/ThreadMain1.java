@@ -8,10 +8,5 @@ public class ThreadMain1 {
         rabbit.setName("兔子");
         turtle.start();
         rabbit.start();
-        if (!rabbit.isAlive()){
-            turtle.stop();
-            rabbit.stop();
-        }
-
     }
 }
