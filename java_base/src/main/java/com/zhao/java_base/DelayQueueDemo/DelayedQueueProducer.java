@@ -10,8 +10,7 @@ import java.util.concurrent.DelayQueue;
 @Slf4j
 @Data
 @AllArgsConstructor
-public
-class DelayedQueueProducer implements Runnable {
+public class DelayedQueueProducer implements Runnable {
     private DelayQueue<DelayedUser> delayQueue;
 
     private Integer messageCount;

@@ -17,23 +17,22 @@ class JavaBaseApplicationTests {
     @Test
     void contextLoads() throws InterruptedException {
 
-            ExecutorService executor = Executors.newFixedThreadPool(2);
+        ExecutorService executor = Executors.newFixedThreadPool(2);
 
-            DelayQueue<DelayedUser> queue = new DelayQueue<>();
-            int messageCount = 2;
-            long delayTime = 500;
-            DelayedQueueConsumer consumer = new DelayedQueueConsumer(
-                    queue, messageCount);
-            DelayedQueueProducer producer = new DelayedQueueProducer(
-                    queue, messageCount, delayTime);
+        DelayQueue<DelayedUser> queue = new DelayQueue<>();
+        int messageCount = 2;
+        long delayTime = 500;
+        DelayedQueueProducer producer = new DelayedQueueProducer(queue, messageCount, delayTime);
+        DelayedQueueConsumer consumer = new DelayedQueueConsumer(queue, messageCount);
 
-            // when
-            executor.submit(producer);
-            executor.submit(consumer);
 
-            // then
-            executor.awaitTermination(5, TimeUnit.SECONDS);
-            executor.shutdown();
+        // when
+        executor.submit(producer);
+        executor.submit(consumer);
+
+        // then
+        executor.awaitTermination(5, TimeUnit.SECONDS);
+        executor.shutdown();
 
 
     }

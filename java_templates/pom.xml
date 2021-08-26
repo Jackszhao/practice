@@ -91,6 +91,11 @@
             <artifactId>spring-security-web</artifactId>
             <version>5.2.2.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>com.dtflys.forest</groupId>
+            <artifactId>forest-spring-boot-starter</artifactId>
+            <version>1.5.2-BETA</version>
+        </dependency>
     </dependencies>
 
     <build>
