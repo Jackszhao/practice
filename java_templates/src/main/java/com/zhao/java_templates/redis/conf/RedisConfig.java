@@ -1,4 +1,4 @@
-package com.zhao.java_templates.redis;
+package com.zhao.java_templates.redis.conf;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

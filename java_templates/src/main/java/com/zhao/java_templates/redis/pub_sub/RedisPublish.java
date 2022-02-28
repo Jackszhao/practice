@@ -1,4 +1,4 @@
-package com.zhao.java_templates.redis;
+package com.zhao.java_templates.redis.pub_sub;
 
 import redis.clients.jedis.Jedis;
 

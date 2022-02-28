@@ -1,5 +1,6 @@
-package com.zhao.java_templates.redis;
+package com.zhao.java_templates.redis.pub_sub;
 
+import com.zhao.java_templates.redis.pub_sub.MyListener;
 import redis.clients.jedis.Jedis;
 
 public class RedisSubscribe {
