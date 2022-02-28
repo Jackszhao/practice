@@ -58,8 +58,10 @@ public class RedisConfig {
         Map<String, RedisCacheConfiguration> configMap = new HashMap<>();
         configMap.put("timeGroup", config);
         configMap.put("user", config.entryTtl(Duration.ofSeconds(120)));
-        RedisCacheManager cacheManager = RedisCacheManager.builder(redisConnectionFactory)// 使用自定义的缓存配置初始化一个cacheManager
-                .initialCacheNames(cacheNames)  // 注意这两句的调用顺序，一定要先调用该方法设置初始化的缓存名，再初始化相关的配置
+        // 使用自定义的缓存配置初始化一个cacheManager
+        RedisCacheManager cacheManager = RedisCacheManager.builder(redisConnectionFactory)
+                // 注意这两句的调用顺序，一定要先调用该方法设置初始化的缓存名，再初始化相关的配置
+                .initialCacheNames(cacheNames)
                 .withInitialCacheConfigurations(configMap)
                 .build();
         return cacheManager;
